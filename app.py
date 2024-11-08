@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from huggingface_hub import InferenceClient
 import pyttsx3
-import dotenv
 import os
 
 app = Flask(__name__)
