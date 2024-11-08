@@ -4,6 +4,8 @@ __pycache__/
 *$py.class
 .github
 
+security_token.py
+
 # C extensions
 *.so
 
@@ -127,3 +129,4 @@ venv.bak/
 lightning_logs/
 MNIST
 .DS_Store
+.vercel
