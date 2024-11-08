@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect
 from huggingface_hub import InferenceClient
 import pyttsx3
-import security_token
+import dotenv
+import os
 
 app = Flask(__name__)
 
@@ -31,8 +32,7 @@ def index():
 def process_image(image_url):
     """Process the image URL and return a generated story."""
     # Get the API key from your token module
-    myapi = security_token.get_token()
-    client = InferenceClient(api_key=myapi)
+    client = InferenceClient(os.getenv('myapi'))
 
     # Create a prompt for generating a story
     messages = [
